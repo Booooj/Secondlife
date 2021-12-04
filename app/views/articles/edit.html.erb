@@ -1,0 +1,10 @@
+<div class="text">
+      <h1>編集する</h1>
+      <%= form_tag("/articles/#{@article.id}/update") do %>
+          <% @article.errors.full_messages.each do |message| %>
+              <%= message %>
+          <% end %>
+          <textarea name="body"><%= @article.body %></textarea>
+          <input type="submit" value="保存">
+      </div>
+    <% end %>

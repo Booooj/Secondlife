@@ -1,0 +1,10 @@
+<h1>制度などのニュース＆つぶやき</h1> 
+  <div class="text"> 
+ <h2><%= link_to("つぶやく＆投稿" , "/articles/new") %></h2>
+            <% @articles.each do |article| %>
+              <div class="list">   
+              <p>  <%= article.user.name%></p>
+                <%= link_to(article.body, "/articles/#{article.id}/") %>
+               </div>
+                <% end %>
+                </div>

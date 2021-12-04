@@ -1,0 +1,12 @@
+<div class="text">
+ <h1>編集する</h1>
+      <%= form_tag("/hobbies/#{@hobby.id}/update") do %>
+          <% @hobby.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <textarea name="body"><%= @hobby.body %></textarea>
+          <input type="submit" value="保存">
+    <% end %>
+    </div>

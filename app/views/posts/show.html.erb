@@ -1,0 +1,32 @@
+<div class="pd">  
+投稿者 
+ <p> <%= link_to(@user.name, "/users/#{@user.id}") %></p>
+        質問内容
+      <p> <%= @post.content %> </p>
+      <% if @post.user_id == @current_user.id %>
+      <p>
+          <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+          <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+        </p>
+      <% end %>
+<h3 style="padding:20px">回答一覧</h3>
+<% if @post.comments.any? %>
+<% @post.comments.each do |comment| %>
+  <div class="list">
+<%= link_to(@user.name, "/users/#{@user.id}") %>
+<p>  <%= comment.body %> </p>
+<% if @post.user_id == @current_user.id %>
+  <p><%= link_to '回答を消去する',post_comment_path(@post, comment),method: :delete %></p>
+    <% end %>
+    </div>
+<% end %>
+<% end %>
+<h4 style="padding:10px">回答を投稿する</h4>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+<p class="form-c">
+  <%= f.text_field :body %>
+</p>
+<p>
+  <%= f.submit  value="回答" %>
+</p>
+<% end %>
