@@ -13,7 +13,7 @@
 <% if @post.comments.any? %>
 <% @post.comments.each do |comment| %>
   <div class="list">
-<%= link_to(@user.name, "/users/#{@user.id}") %>
+  <%= comment.user.name %>
 <p>  <%= comment.body %> </p>
 <% if @post.user_id == @current_user.id %>
   <p><%= link_to '回答を消去する',post_comment_path(@post, comment),method: :delete %></p>
