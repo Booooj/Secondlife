@@ -13,7 +13,7 @@
 <% if @post.comments.any? %>
 <% @post.comments.each do |comment| %>
   <div class="list">
-<%= link_to(@user.name, "/users/#{@user.id}") %>
+  <%= comment.user.name %>
 <p>  <%= comment.body %> </p>
 <% if @post.user_id == @current_user.id %>
   <p><%= link_to '回答を消去する',post_comment_path(@post, comment),method: :delete %></p>
@@ -23,10 +23,10 @@
 <% end %>
 <h4 style="padding:10px">回答を投稿する</h4>
 <%= form_for([@post, @post.comments.build]) do |f| %>
-<p class="form-c">
+  <p class="form-c">
   <%= f.text_field :body %>
-</p>
-<p>
-  <%= f.submit  value="回答" %>
-</p>
+  </p>
+  <p>
+  <%= f.submit value="回答" %>
+  </p>
 <% end %>

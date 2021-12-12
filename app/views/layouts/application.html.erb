@@ -24,6 +24,7 @@ integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3Ah
         <% end %>
       </div>
       </a>
+      <div class="text">
       <nav>
         <% if @current_user %>
         <ul>
@@ -35,6 +36,8 @@ integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3Ah
         </ul>
         </nav>
         <% else %>
+        </div>
+        <div class="text">
         <nav>
         <ul>
         <li><%= link_to("home","/") %></li>
@@ -44,6 +47,7 @@ integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3Ah
         </ul>
         </nav>
         <% end %>
+        </div>
     </header>
     <div class="text">
     <% if flash[:notice] %>
@@ -51,11 +55,10 @@ integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3Ah
     <% end %>
     </div>
     <%= yield %>
-    <footer style="padding-top:100px">
+    <footer style="padding-top:300px">
     <div class="text">
-    　　     
-            <p>©セカンドライフコミュニティ</p>
+    　　      ©セカンドライフコミュニティ
+    </div>
           </footer>
-        </div>
   </body>
 </html>
