@@ -1,0 +1,10 @@
+<div class="pd"> 
+投稿者
+<p>  <%= @hobby.user.name %></p>
+    投稿内容
+      <p> <%= @hobby.body %></p>
+      <% if @hobby.user_id == @current_user.id %>
+      <%= link_to("編集", "/hobbies/#{@hobby.id}/edit") %>
+      <%= link_to("削除", "/hobbies/#{@hobby.id}/destroy", {method: "hobby"}) %>
+      <% end %>
+</div>

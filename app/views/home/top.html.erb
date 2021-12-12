@@ -1,0 +1,51 @@
+<div class="text">
+<h1 style="padding:50px">メニュー</h1>
+  </div>
+  <div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">専門家に質問して、課題を解決できます</h5>
+        <p class="card-text">資産運用・退職金に使い方や介護についてなど</p>
+        <div style="text-align:right">
+        <%= link_to("質問を投稿＆見る", "/posts/index") %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+<h5 class="card-title">イベント情報＆つぶやき</h5>
+        <p class="card-text">イベント情報が見れます</p>
+        <div style="text-align:right">
+        <%= link_to("イベント情報＆つぶやきを見る", "/hobbies/index") %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">ニュース</h5>
+      <p class="card-text">ニュースが見れます</p>
+      <div style="text-align:right">
+      <%= link_to("ニュース情報を見る", "/articles/index") %>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="text">
+    <h2 class="pd">専門家に質問投稿可能！！</h2>
+  <p>(質問事例)</p>
+  </div>
+    <% @posts.each do |post| %>
+      <div class="text">
+      <div class="list">
+          <p><%= link_to(post.user.name, "/users/#{post.user.id}") %></p>
+         <p> <%= link_to(post.content, "/posts/#{post.id}") %></p>
+      </div>
+      </div>
+    <% end %>
