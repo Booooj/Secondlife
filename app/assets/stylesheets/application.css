@@ -14,6 +14,16 @@
  *= require_tree .
  *= require_self
  */
+@media (min-width: 0px) and (max-width: 480px) {
+  
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1024px) {
+
 body{
     background-color: white;
   }
@@ -73,3 +83,4 @@ body{
         h2{
           padding-top: 10px;
         }
+}
