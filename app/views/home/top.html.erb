@@ -5,8 +5,8 @@
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">専門家に質問して、お悩みを解決できます!</h5>
-        <p class="card-text">資産運用・退職金の使い方や介護についてなど</p>
+        <h5 class="card-title">お悩みを質問して、解決!</h5>
+        <p class="card-text">資産運用・退職金の使い方など</p>
         <div style="text-align:right">
         <%= link_to("質問を投稿＆回答を見る", "/posts/index") %>
         </div>
@@ -19,7 +19,7 @@
 <h5 class="card-title">イベント情報＆ニュース</h5>
         <p class="card-text">年金制度改正などのニュース、高齢者向けのイベント情報が見れます!</p>
         <div style="text-align:right">
-        <%= link_to("イベント情報＆ニュースを見る", "/hobbies/index") %>
+        <%= link_to("イベント情報＆ニュースを見る", "/articles/index") %>
         </div>
       </div>
     </div>
@@ -29,16 +29,27 @@
 <div class="col-sm-6">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">健康づくり＆簡単料理</h5>
-      <p class="card-text">健康づくり＆簡単料理のご紹介！</p>
+      <h5 class="card-title">おすすめ旅先情報</h5>
+      <p class="card-text">おすすめの旅先情報を共有！</p>
       <div style="text-align:right">
-      <%= link_to("健康づくり＆簡単料理を見る", "/articles/index") %>
+      <%= link_to("おすすめ旅先情報を見る", "/hobbies/index") %>
       </div>
     </div>
   </div>
 </div>
+<div class="col-sm-6">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">簡単料理</h5>
+      <p class="card-text">簡単料理情報が見れます!</p>
+      <div style="text-align:right">
+      <%= link_to("簡単料理を見る", "/cooks/index") %>
+      </div>
+  </div>
+</div>
+</div>
   <div class="text">
-    <p><h2 class="pd">専門家に質問できます！！</h2></p>
+    <p><h2 class="pd">お悩み事の質問例</h2></p>
   <p>(質問一覧)</p>
     <% @posts.each do |post| %>
       <div class="list">
