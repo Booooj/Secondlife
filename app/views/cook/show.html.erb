@@ -1,10 +1,9 @@
 <div class="pd"> 
 投稿者 
-
+<p> <%= @cook.user.name %>さん</p>
 投稿内容 
-<img src="<%= "/post_images/#{@cook.post_image}" %>" width="300" height="300">
+<p><img src="<%= "/post_images/#{@cook.post_image}" %>" width="200" height="200"></p>
       <p> <%= @cook.body %> </p>
-      <p> <%= @cook.user.name %></p>
       <% if @cook.user_id == @current_user.id %>
       <%= link_to("削除", "/cooks/#{@cook.id}/destroy", {method: "cook"}) %>
       <% end %>
