@@ -30,7 +30,8 @@ integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3Ah
         <ul>
         <li> <%= link_to("専門家に質問！！", "/posts/index") %></li>
         <li> <%= link_to("ニュース＆イベント情報", "/articles/index") %></li>
-        <li> <%= link_to("健康づくり＆簡単料理", "/hobbies/index") %></li>
+        <li> <%= link_to("おすすめ旅先情報", "/hobbies/index") %></li>
+        <li> <%= link_to("料理情報", "/cooks/index") %></li>
         <li>  <%= link_to("アカウント情報", "/users/#{@current_user.id}") %> </li>
         <li> <%= link_to("ログアウト", "/logout", {method: "post"}) %></li>
         </ul>
@@ -41,9 +42,12 @@ integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3Ah
         <nav>
         <ul>
         <li><%= link_to("home","/") %></li>
+        <li> <%= link_to("お悩み事を質問", "/posts/index") %></li>
+        <li> <%= link_to("ニュース＆イベント情報", "/articles/index") %></li>
+        <li> <%= link_to("おすすめ旅先情報", "/hobbies/index") %></li>
+        <li> <%= link_to("簡単料理", "/cooks/index") %></li>
         <li><%= link_to("新規登録", "/signup") %></li>
         <li>  <%= link_to("ログイン", "/login") %></li>
-        <li> <%= link_to("質問投稿＆ニュースなど","/articles/new") %> </li>
         </ul>
         </nav>
         <% end %>
