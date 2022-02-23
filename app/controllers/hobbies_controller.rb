@@ -1,5 +1,5 @@
 class HobbiesController < ApplicationController
-    before_action :authenticate_user
+    before_action :authenticate_user, only: [:new,:show, :create]
     before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
   
     def index
@@ -20,10 +20,16 @@ class HobbiesController < ApplicationController
       end
       
       def create
-        @hobby = Hobby.new(
+         @hobby = Hobby.new(
           body: params[:body],
           user_id: @current_user.id
         )
+        @hobby.save
+        if params[:image]
+          @hobby.image = "#{@hobby.id}.jpg"
+          image = params[:image]
+          File.binwrite("public/post_images/#{@hobby.image}",image.read)
+        end
         if @hobby.save
           flash[:notice] = "投稿しました"
           redirect_to("/hobbies/index")
