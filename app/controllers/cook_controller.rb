@@ -50,7 +50,7 @@ class CookController < ApplicationController
       flash[:notice] = "質問を編集しました"
       redirect_to("/cooks/index")
     else
-      render("cooks/edit")
+       render("cooks/edit")
     end
     end
     
