@@ -1,10 +1,38 @@
-<h1>高齢者イベント一覧</h1>
+<h1>旅先情報</h1>
+
+<div class="container">
+  <div class="row">
+  <div class="card w-75">
+  <div class="card-body">
+    <p class="card-text">
+    <h5 class="card-title">温泉宿選び</h5>
+    <table>
+   <tr>
+       <td><img alt="photo" src="/assets/hotel.jpg"alt="フォト" width="300" height="200" /></td></div> 
+       <td>&nbsp;</td>
+       <td>
+      
+    <h6>足が不自由な高齢者向け、バリアフリー対応の温泉宿一覧</h6>
+   <p>・ ○○温泉宿</p>
+   <p> ・□□温泉宿</p></td>
+   </tr>
+</table>
+  </div>
+</div>
 <div class="text">
-    <h2><%= link_to("イベント情報を投稿" , "/hobbies/new") %></h2>
+<h5>おすすめ旅先の情報,投稿ください！！</h5>
+<div class="text">
+    <h2><%= link_to("投稿する" , "/hobbies/new") %></h2>
             <% @hobbies.each do |hobby| %>
                 <div class="list">
-                <p> <%= hobby.user.name %></p>
-                <p><%= link_to(hobby.body, "/hobbies/#{hobby.id}/") %></p>
-                </div>
+                <p> <%= hobby.user.name %>さん</p>
+                <table>
+    <tr>
+        <td> <img src="<%= "/post_images/#{hobby.image}" %>" width="200" height="200">  </td>
+        <td>&nbsp;</td>
+        <td><%= link_to(hobby.body, "/hobbies/#{hobby.id}/") %></td>
+    </tr>
+</table>
+</div>
                 <% end %>
                 </div>   
