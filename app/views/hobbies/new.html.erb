@@ -1,7 +1,12 @@
 <div class="text">
  <h1>投稿する</h1>
     <%=form_tag("/hobbies/create")do%>
+    <% @hobby.errors.full_messages.each do |message| %>
+        <%= message %>
+    <% end %>
         <textarea name="body"></textarea>
+        <p> 画像アップロード</p>
+        <p><input type = "file" name ="post_image"></p>
           <input type="submit" value="投稿">
    <% end%>
   </div>
