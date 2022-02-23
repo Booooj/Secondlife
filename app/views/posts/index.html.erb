@@ -1,7 +1,7 @@
-<h1>専門家に質問できます！</h1>
+<h1>お悩み事を質問</h1>
 <div class="text">
+<img alt="photo" src="/assets/answer.jpg"alt="フォト" width="300" height="300" />
   <h2><%= link_to("質問を投稿する" , "/posts/new") %>
-  <p style="padding:20px">質問一覧</p></h2>
   <% @posts.each do |post| %>
       <div class="list">
            <p> <%= link_to(post.user.name, "/users/#{post.user.id}") %></p>
