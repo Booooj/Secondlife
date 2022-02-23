@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get "hobbies/new" => "hobbies#new"
   get "hobbies/:id" => "hobbies#show"
   post "hobbies/create" => "hobbies#create"
-  get "hobbies/:id/edit" => "hobbies#edit"
   post "hobbies/:id/update" => "hobbies#update"
   post "hobbies/:id/destroy" => "hobbies#destroy"
 
@@ -34,9 +33,16 @@ Rails.application.routes.draw do
   post "articles/:id/update" => "articles#update"
   post "articles/:id/destroy" => "articles#destroy"
 
+  get "cooks/index" => "cook#index"
+  get "cooks/new" => "cook#new"
+  get "cooks/:id" => "cook#show"
+  post "cooks/create" => "cook#create"
+  post "cooks/:id/update" => "cook#update"
+  post "cooks/:id/destroy" => "cook#destroy"
+  
+
   resources :posts
   resources :posts do
     resources :comments
   end
 end
-
