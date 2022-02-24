@@ -1,9 +1,40 @@
-<h1>ニュース＆イベント情報</h1> 
+<h1>ニュース＆イベント情報</h1>
+<div class="container">
+  <div class="row">
+  <div class="card w-75">
+  <div class="card-body">
+    <p class="card-text">
+    <h5 class="card-title">年金制度改正</h5>
+    <table>
+    <tr>
+        <td><img alt="photo" src="/assets/money.jpg"alt="フォト" width="300" height="200" /></td></div> 
+        <td>&nbsp;</td>
+        <td>
+        <h5>2022年4月から変更される内容</h5>
+        <li>公的年金は現在60歳から70歳の間で任意に受け取るタイミングを選択することができ,それが75歳までになり選択範囲が広げられます。</li>
+        <li>60歳から64歳の間に働きながら年金を受け取る場合、給与と年金の額が28万円を超えると年金の支給が超えた部分について停止されていました。
+      その金額が28万円から47万円へと引き上げられます。</li>
+      <li>年金受給権を取得後に就労し厚生年金に加入した場合は、
+      厚生年金を脱退後にその期間の加入実績が年金額に反映されていました。
+      それが、在職中にも年1回、10月に加入実績が年金額に反映されるようになります。</li>
+      <li>個人型確定拠出年金と企業型確定拠出年金について、国民年金の加入者であれば60歳以上でも
+      加入可能になります。企業型確定拠出年金については、65歳未満→70歳まで加入可能となりました。</li>
+      <p>【参考文献】 </p>
+      <p> 執筆者 : 柘植輝 </p>
+   年金
+      ファイナンシャルフィールド     
+      シニアの働き方が変わる？ 2022年4月以降施行される「年金制度改正法」とは？ 
+      <p>https://financial-field.com/pension/entry-121170 </p>
+      <p> 更新日: 2021.11.17 </p></td>
+    </tr>
+ </table>
+</div> 
+</div>
   <div class="text"> 
- <h2><%= link_to("ニュース＆イベント情報についてつぶやく" , "/articles/new") %></h2>
+ <h2><%= link_to("ニュース＆イベント情報についてつぶやく","/articles/new") %></h2>
             <% @articles.each do |article| %>
               <div class="list">   
-              <p>  <%= article.user.name%></p>
+              <p>  <%= article.user.name%>さん</p>
                 <%= link_to(article.body, "/articles/#{article.id}/") %>
                </div>
                 <% end %>
