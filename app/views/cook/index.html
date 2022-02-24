@@ -1,1 +1,56 @@
-
+<h1>クッキング</h1>
+<div class="container">
+  <div class="row">
+  <div class="card w-75">
+  <div class="card-body">
+    <p class="card-text">
+    <div style="text-align: center">
+    <div style="text-align: center"><img alt="menu" src="/assets/beans.jpg"alt="サンプル" width="300" height="200" /></div>  
+    <h3 class="card-title">豆乳グラタン</h3>
+    <p>【材料・作り方】</p>
+    <p>
+    <h5>材料 （1人分）:</h5>
+木綿豆腐
+150g
+玉ねぎ
+2/1個
+ほうれん草
+50g
+食用油
+70cc
+<p>クリームソース用材料：</p>
+シチューのルー（顆粒）
+70g
+牛乳
+200cc
+<h5>作り方</h5>
+    1.食用油で玉ねぎを炒め、ほうれん草を加えて軽く炒めます。
+   <p> 2.牛乳を加えて、シチューの素で味を整えます。
+    3．とろみが出てきたら木綿豆腐を加えて温めます。</p>
+    4.器に入れ、オーブンで焼きます。完成です！
+    <p>【参考文献】</p> 
+    簡単ヘルシー♪とろ～り豆乳グラタン。byばんごはん【クックパッド】簡単おいしいみんなのレシピが365万品
+    <p> https://cookpad.com/recipe/1968300 </p>
+  </div>
+  </div>
+  </div>
+  <div class="text"> 
+<h5>作ってみた料理、ぜひ投稿ください！！</h5>
+<h2><%= link_to("投稿する","/cooks/new") %></h2>
+</div>
+           <% @cooks.each do |cook| %>
+             <div class="list">   
+             <div class="text"> 
+             <p>  <%= cook.user.name%>さん</p>
+             </div>
+             <table>
+    <tr>
+        <td> <img src="<%= "/post_images/#{cook.post_image}" %>" width="200" height="200"> </td>
+        <td>&nbsp;</td>
+        <td>   <%= link_to(cook.body, "/cooks/#{cook.id}/") %></td>
+    </tr>
+</table>
+              </div>
+               <% end %>
+               </div>
+         
