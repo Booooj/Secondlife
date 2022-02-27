@@ -2,6 +2,4 @@
 高齢者向けコミュニティサイトです。
 老後の生活について質問でき、回答ができるようになっています。
 また、ニュースやイベント情報,料理情報、旅先情報も投稿できるようになっています。
-
-
-![トップ](https://user-images.githubusercontent.com/90837337/155869092-e147f2af-a075-4636-bdd1-5357f6d95edb.jpeg)
+![top](https://user-images.githubusercontent.com/90837337/155870237-63f62d3f-ab40-435b-a4ac-6dabcea2f686.jpeg)
