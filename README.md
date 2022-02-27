@@ -3,5 +3,5 @@
 老後の生活について質問でき、回答ができるようになっています。
 また、ニュースやイベント情報も投稿できるようになっています。
 
-![セカンドライフ](https://user-images.githubusercontent.com/90837337/151697194-c871b42d-6d2e-4a6a-8818-b7e1a3886502.jpeg)
 
+![トップ](https://user-images.githubusercontent.com/90837337/155869092-e147f2af-a075-4636-bdd1-5357f6d95edb.jpeg)
